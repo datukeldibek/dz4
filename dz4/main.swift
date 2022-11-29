@@ -23,21 +23,24 @@ for num in 1...100{
 print("\n\ntask2")
 var text: String = "dragon,dilute,enthusiasm,salmon,fibre,bare,lodge,teacher,thread,warrant,brand,sunshine,shortage,issue,swipe,secretary,graduate,absorption,finished,redeem."
 var count: Int = 0
-var word: String = ""
+var str = ""
 
-func getLength(_ text: String){
+func getLength(_ text: String) -> String{
     for index in text{
         if index != "," && index != "."{
-            print(index, terminator: "")
+            str += "\(index)"
+            //print(index, terminator: "")
             count += 1
             //word += index
         }else{
-            print(" - ", count, "символов")
+            str += " - \(count) символов\n"
+            //print(" - ", count, "символов")
             count = 0
         }
     }
+    return str
 }
-getLength(text    )
+print(getLength(text))
 
 //extra
 print("\nextra")
